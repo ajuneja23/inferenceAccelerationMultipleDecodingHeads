@@ -3,3 +3,5 @@
 /medusa_adjusted_model
 /self_distilled_wikitext
 /venv
+traj_data
+trained_reward_model.pth
