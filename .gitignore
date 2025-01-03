@@ -5,3 +5,4 @@
 /venv
 traj_data
 trained_reward_model.pth
+final_trained_model.pth

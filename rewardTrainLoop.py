@@ -31,7 +31,7 @@ def trainingReward(epochs):
             file.write(f"Done with Epoch {i+1}/{epochs}\n")
 
 
-epochs = 75
+epochs = 30
 trainingReward(epochs)
 
 
