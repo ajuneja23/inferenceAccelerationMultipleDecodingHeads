@@ -42,4 +42,4 @@ plt.legend()
 
 # Show the plots
 plt.tight_layout()
-plt.show()
+plt.savefig("train_gpt_reward_plot.png")
