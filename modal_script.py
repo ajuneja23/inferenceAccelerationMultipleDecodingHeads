@@ -14,10 +14,10 @@ image = image.add_local_file(
 )
 
 
-@app.function(gpu="A10G", image=image, timeout=10800, volumes={"/model_dir": volume})
+@app.function(gpu="A10G", image=image, timeout=36000, volumes={"/model_dir": volume})
 def run_model_training():
     model = model_train_loop()
-    save_path = "/model_dir/final_trained_model.pth"
+    save_path = "/model_dir/final_final_trained_model.pth"
     torch.save(model.state_dict(), save_path)
     print(f"Model saved at {save_path}")
     volume.commit()

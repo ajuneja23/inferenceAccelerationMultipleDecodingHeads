@@ -21,6 +21,7 @@ def calculateTrajectories(model, tokenizer, prompt):
         truncation=True,
         padding="longest",
     )
+
     input_ids = tokens["input_ids"]
     input_ids = input_ids.to(device)
     full_logits = []
@@ -151,7 +152,7 @@ def reward_training_loop(reward_model, llm_model, traj_data_list):
 
 
 def train_llm(
-    reward_model, base_gpt, train_gpt, tokenizer, prompts, beta=0.5, epochs=20, lr=1e-4
+    reward_model, base_gpt, train_gpt, tokenizer, prompts, beta=0.5, epochs=30, lr=1e-4
 ):
     optimizer = torch.optim.Adam(train_gpt.parameters(), lr=lr)
     train_gpt.train()

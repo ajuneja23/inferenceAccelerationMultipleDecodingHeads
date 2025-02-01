@@ -31,7 +31,7 @@ def model_train_loop():
     i = 0
     good_count = 0
     prompts = []
-    while good_count < 900:
+    while good_count < 1300:
         if len(wiki_data[i]["text"]) >= 1000:
             good_count += 1
             if good_count >= 450:
